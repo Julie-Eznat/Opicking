@@ -1,0 +1,41 @@
+@charset 'UTF-8';
+
+// 1 Abstracts
+@import 'abstracts/variables',
+        'abstracts/typography',
+        'abstracts/mixins';
+
+
+// 2 Vendor
+@import '~font-awesome/scss/font-awesome';
+@import '~bootstrap/scss/bootstrap';
+
+
+
+// 3 Base
+@import 'base/base';
+
+// 4 Layout
+
+@import 'layout/header',
+        'layout/form',
+        'layout/introduction',
+        'layout/footer',
+        'layout/author',
+        'layout/404',
+        'layout/page-article',
+        'layout/page-profil',
+        'layout/page-category';
+
+
+// 5 components
+
+@import 'components/login-form',
+        'components/contact-form',
+        'components/jarallax',
+        'components/carousel',
+        'components/card',
+        'components/button';
+
+ @import 'shame';
+

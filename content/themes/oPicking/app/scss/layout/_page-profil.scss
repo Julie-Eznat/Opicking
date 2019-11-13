@@ -1,0 +1,23 @@
+.profil{
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+    font-size: 0.7rem;
+    
+
+    &__title{
+        text-align: center;
+        color:#343A40;
+        font-weight: 700;
+        text-decoration: underline;
+
+    }
+    &__image{
+        margin:auto;
+        padding:1rem 0;
+    }
+    &__description{
+        padding: 2rem;
+    }
+
+}
+

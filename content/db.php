@@ -1,0 +1,1 @@
+/var/www/html/projet-LaCueillette/content/plugins/query-monitor/wp-content/db.php

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>oPicking</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Object Fit polyfill -->
+  <script src="https://unpkg.com/object-fit-images/dist/ofi.min.js"></script>
+  <!-- Jarallax -->
+  <script src="https://unpkg.com/jarallax@1.10/dist/jarallax.min.js"></script>
+  <!-- Include it if you want to use Video parallax -->
+  <script src="https://unpkg.com/jarallax@1.10/dist/jarallax-video.min.js"></script>
+  <!-- Include it if you want to parallax any element -->
+  <script src="https://unpkg.com/jarallax@1.10/dist/jarallax-element.min.js"></script>
+
+
+</head>
+<body class="home">
+
+  <!--Layout header-->
+  <header class="header" >
+    <div class="header__container container-fluid"> 
+      <div class="header__container__row  row ">
+        <div class="header__container__row__col     header__navbar col no-padding">
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid d-flex flex-row justify-content-between">
+                <div class="m-r-auto">
+
+                    <a class="navbar-brand " href="index.php"> 
+                      <img src="../assets/images/opicking.png" alt="" class="header__logo">
+                      <span class= "logo_name" > oPicking</span></a>
+                    </div>
+            
+        
+                    <div class="">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+            
+                        <div class="collapse navbar-collapse" id="navbarsExample07">
+                        <ul class="navbar-nav mr-auto">
+               
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Catégories</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdown07">
+                              <a class="dropdown-item" href="#">Flore</a>
+                              <a class="dropdown-item" href="#">Faune</a>
+                              <a class="dropdown-item" href="#">Habitat</a>
+                            </div>
+                          </li> 
+                        </ul>
+                        <form class="form-inline my-2 my-md-0" type="GET" id="searchform" action="">
+                            <input class="form-control" type="text" placeholder="Search" aria-label="Search" name="search" id="search">
+                            <span class="input-group-btn">
+                              <button class="btn btn-default" id="search_user"><i  class="fa fa-search" aria-hidden="true"></i></button>
+                              </span>
+                          </form>
+                        </div>
+                      </div>
+           
+             <div class="m-l-auto">
+                <a href=""><i class="fa fa-user" aria-hidden="true" id="login"></i></a>
+                <a href=""><i class="fa fa-sign-in" aria-hidden="true" id="logout"></i></a>
+                <!--Affichage de l'élément de deconnexion-->
+                <!-- <a href=""><i class="fa fa-sign-out" aria-hidden="true" id="logout"></i></a> -->
+              </div>
+
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+<!--MODALE D'AFFINAGE RECHERCHE-->
+<div id="search_options">
+    <div class="container">
+      <div class="row">
+          <div class="col-12 col-md-2">
+           Affiner la recherche
+          </div>
+          <div class="col-12 col-md-10">
+            <input type="checkbox" name="search_tag_checkbox">Tags <input type="checkbox" name="search_video_checkbox">Video 
+            <div class="form-group">
+              <label for="sel1">Filtrer par</label>
+              <select class="form-control" id="form_addpost_category">
+                  <option>Par date</option>
+                  <option>Par popularité</option>
+              </select>
+              <input type="checkbox" name="search_orderup_checkbox">Ordre croissant <input type="checkbox" name="search_orderdown_checkbox">Ordre décroissant
+          </div>
+            
+          </div> 
+      </div>
+    </div>
+</div>
+
+<!--MODALE DE CONNEXION-->
+<div id="form_login">
+  <form class="container" action="" method='post'>
+    <div class="row">
+        <div class="col-12 col-md-3">
+          <label class='my-username' >Connection</label><br> 
+          <input type='text' name='username' class='text' value=''>
+        </div>
+        <div class="col-12 col-md-3">
+          <label class='my-password' >Mot de passe</label><br>
+          <input type='password' name='password' class='text' value=''>
+        </div>
+        <div class="col-12 col-md-3">
+          <input class='myremember' name='rememberme' type='checkbox' value='forever'> Se souvenir de moi
+        </div>
+        <div class="col-12 col-md-3">
+          <input type='hidden' id='login' name='login' value='login'>
+          <button type='submit' id='submitbtn' name='submit'>Se connecter</button>
+      </div> 
+    </div>
+  </form>
+</div>
+
+<!--MODALE DE DECONNEXION-->
+<div id="form_logout">
+    <form class="container" action="" method="post">
+      <div class="row">
+          <div class="col-12 col-md-4">
+            Voulez-vous vraiment vous déconnecter ?
+          </div>
+          <div class="col-12 col-md-4">
+            <input type='hidden' id='login' name='logout' value='logout'>
+            <button type='submit' id='submit_logout' name='submit_logout'>OUI</button>
+            <!-- <button id='submit_escape' name='submit_escape'>NON</button> -->
+          </div> 
+      </div>
+  </form>
+</div>
+
+</header>
+
+<!-- components: card -->
+
+<main class="category" >
+  <div class="container">
+      <div class="row justify-content-center">
+          <div class="col-12 col-xl-8 ">
+              <div class="card mb-4" style="z-index:1;">
+                  <div class="card-body">
+                  
+                      <h5 class="card-title"><a href=""></a> Les guerriers de l'océan </h5>
+                      
+                      
+                      <div class="wrap_single embed-responsive-item">
+                          <div class="card-img-top embed-responsive" style="text-align:center; padding-top:0.5rem"><iframe title="Les guerriers de l'océan" width="500" height="281" src="https://www.youtube.com/embed/beUvA3OMJlE?feature=oembed" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>                                    </div><p style=" padding-top:1rem">Le reportage suis l'Association Sea Shephierd dans l'océan Austral, en Tanzanie et dans l'archipel de Palaos, dans son combat contre le braconnage et la pêche abusive .</p>
+                                                  
+                        
+                        </div>
+                          
+                                                  
+                  </div>
+                    
+                        <strong style="padding-top:1rem ;padding-top:1rem;"> Soyez le premier à commenter!</strong>
+                    
+                  
+                  </div>
+                  </div>
+                
+                  <div class="col-12 col-xl-8 ">
+                      <div class="card mb-4" style="z-index:1;">
+                          <div class="card-body">
+                          
+                              <h5 class="card-title"><a href=""></a> Les guerriers de l'océan </h5>
+                              
+                              
+                               <div class="wrap_single embed-responsive-item">
+                                  <div class="card-img-top embed-responsive" style="text-align:center; padding-top:0.5rem"><iframe title="Soigneurs de terres, le choix de l'agro-écologie" width="500" height="281" src="https://www.youtube.com/embed/-51aZMXomMA?feature=oembed" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>                          </div>
+                                  <p style=" padding-top:1rem">Documentaire france 2, qui donne l'avis du couple Bouguignons sut l'aberration du mode agricole de nos jours .</p>
+                                                          
+                                            
+                                  
+                                  
+                                
+                                </div>
+                          
+                                                  
+                              </div>
+                                
+                                  <p style="padding-top:1rem; padding-top:1rem;"> Commentaire : 3</p>
+                                
+                              
+                              </div>
+                              </div>
+              
+
+      
+      </div>
+  </div>
+</div>
+</main>       
+<!-- layout: footer -->
+<footer class="footer ">
+
+    <div class="container-fluid">
+
+        <!-- <div class="container-fluid text-center   "> -->
+          <div class="row footer__links ">
+              <div class="col-12 col-md-4  text-center pb-3">
+                
+                  <a href="mentions-legales.html" class="footer__links__color">Mentions Legales</a>
+         
+              </div>  
+              <div class="col-12 col-md-4  text-center pb-3">
+             
+                  <a href="" class="footer__links__color"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                  <a href="" class="footer__links__color"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                  <a href="" class="footer__links__color"><i class="fa fa-github" aria-hidden="true"></i></a>
+               
+              </div>
+              <div class="col-12 col-md-4  text-center">
+                
+                  <a href="FAQ.html" class="footer__links__color">FAQ </a> 
+                  <a href="a-propos.html" class="footer__links__color">A Propos </a>  
+            
+            </div>
+          </div>
+        </div>
+      </footer>
+      
+      
+         <script src="js/app.js"></script>
+      </body>
+      </html>
+

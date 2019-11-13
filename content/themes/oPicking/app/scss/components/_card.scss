@@ -1,0 +1,23 @@
+.card {
+    z-index: -1;
+
+    &__stars {
+        background-color:rgba(0,0,0,1);
+        width:9rem;
+        border-radius :0 0 2rem 0;
+        color:white;
+        left:0;
+        padding:0.5rem 1.2rem;
+        position:absolute;
+
+        top:0;
+    }
+}
+
+.checked {
+    color: #6BA03C;;
+}
+
+.fa-tree {
+    padding: 0.2rem;
+}

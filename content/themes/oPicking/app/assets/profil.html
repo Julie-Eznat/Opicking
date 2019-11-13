@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>oPicking</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Object Fit polyfill -->
+  <script src="https://unpkg.com/object-fit-images/dist/ofi.min.js"></script>
+  <!-- Jarallax -->
+  <script src="https://unpkg.com/jarallax@1.10/dist/jarallax.min.js"></script>
+  <!-- Include it if you want to use Video parallax -->
+  <script src="https://unpkg.com/jarallax@1.10/dist/jarallax-video.min.js"></script>
+  <!-- Include it if you want to parallax any element -->
+  <script src="https://unpkg.com/jarallax@1.10/dist/jarallax-element.min.js"></script>
+
+
+</head>
+<body class="home">
+
+  <!--Layout header-->
+<header class="header" >
+  <div class="header__container container-fluid"> 
+    <div class="header__container__row  row ">
+      <div class="header__container__row__col     header__navbar col no-padding">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div class="container-fluid d-flex flex-row justify-content-between">
+        
+          
+              <div class="m-r-auto">
+                <a class="navbar-brand " href="#"> 
+                  <i class="fa fa-bug" aria-hidden="true"></i>
+                  OPicking</a>
+              </div>
+        
+              <div class="">
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                  </button>
+        
+                <div class="collapse navbar-collapse" id="navbarsExample07">
+                  <ul class="navbar-nav mr-auto">
+         
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Catégories</a>
+                      <div class="dropdown-menu" aria-labelledby="dropdown07">
+                        <a class="dropdown-item" href="#">Flore</a>
+                        <a class="dropdown-item" href="#">Faune</a>
+                        <a class="dropdown-item" href="#">Habitat</a>
+                      </div>
+                    </li>
+                  </ul>
+                  <form class="form-inline my-2 my-md-0">
+                    <input class="form-control" type="text" placeholder="Search" aria-label="Search" size="40">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button"><i class="fa fa-search fa-fw"></i></button>
+                      </span>
+                  </form>
+                </div>
+              </div>
+           
+             <div class="m-l-auto">
+                <a href=""><i class="fa fa-user" aria-hidden="true" id="login"></i></a>
+                <a href=""><i class="fa fa-sign-in" aria-hidden="true" id="logout"></i></a>
+              </div>
+
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+<main class="profil">
+    <div class="container" style=" border:grey solid 1px; padding:4rem; box-shadow: 2px 2px 2px 2px #474747;">
+        <div class="row">
+            <div class="col-12 col-md-8">
+                <h3 class="profil__title">Name</h3>
+                <img class="profil__image" src="images/koala.jpg" alt="" style="width:200px;">
+            </div>
+            <div class="col-12 col-md-8"> 
+                <p style="border: 1px #bbb solid; padding:0.5rem; width:50%">email</p>
+                <p style="border: 1px #bbb solid; padding:0.5rem; width:50%;">website (user-url)</p>
+            </div>  
+            <p class="profil__description">
+                Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae nemo eligendi delectus atque, accusamus iste distinctio rem enim aut explicabo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dolor, hic illo magnam quo laboriosam optio cumque eveniet provident inventore!
+            </p>
+
+        </div>
+        
+    </div>
+</main>
+<footer class="footer">    <!--mettre fixed-bottom si doit rester fixe en bas-->
+    <div class="container-fluid ">
+      <div class="row">
+        <div class="col no-padding text-center">
+          <p class="h4 mb-4 titrejaune">Vous enregistrer</p>
+        </div>
+      </div>
+      <div class="container">
+        <form>  
+        <div class="row">            <!--  mt = margin top 3 (=1rem) au top de la ligne(row) -->
+           <div class="col-12 col-md-3">
+              <div>
+                <input type="text" id="firstname" class="form-control" placeholder="Nom">
+              </div>
+            </div>
+            <div class="col-12 col-md-3">
+              <div>
+                <input type="text" id="secondname" class="form-control" placeholder="Prénom">
+              </div>
+            </div>
+            <div class="col-12 col-md-3">
+              <div>
+                <input type="email" id="email" class="form-control" placeholder="Adresse courriel">
+              </div>
+            </div>
+            <div class="col-12 col-md-3">
+              <div>
+                <input type="text" id="password" class="form-control" placeholder="Mot de passe">
+              </div>
+            </div>
+        </div> 
+        <div class="row mt-3">          <!--  mt-3 : espace entre lignes  --> 
+          <div class="col-12 col-md-6 offset-md-3"> <!-- offset-3 : espace avant et après l'élément, ici 3 car avant et après on a une largeur de 3 complété par le bouton qui a une largeur de 6 --> 
+            <button class="btn btn-info btn-block " type="submit">
+              Vous inscrire
+            </button>
+          </div>
+        </div>
+        </form>
+      </div>
+
+    <!-- <div class="container-fluid text-center   "> -->
+      <div class="row">
+          <div class="col-12 col-md-4">
+            <ul class=" text-center">  
+              <a href="Mentions-Legales">Mentions Legales</a>
+            </ul>
+          </div>  
+          <div class="col-12 col-md-4">
+            <ul class=" text-center">  
+              <a href="https://www.twitter.com/"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+              <a href="https://www.twitter.com/"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+              <a href="https://github.com/"><i class="fa fa-github" aria-hidden="true"></i></a>
+            </ul>
+          </div>
+          <div class="col-12 col-md-4">
+            <ul class="text-center">  
+              <a href="">FAQ </a> 
+              <a href="">A propos </a>  
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+   <script src="js/app.js"></script>
+</body>
+</html>

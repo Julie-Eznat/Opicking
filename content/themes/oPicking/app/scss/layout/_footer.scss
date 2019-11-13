@@ -1,0 +1,55 @@
+.footer {
+
+    background-color: lightgray;
+    
+    width: 100%;
+    bottom: 0;
+   
+}
+
+.footer__links {
+   
+    
+    padding: 2rem;
+    background-color: #343A40;
+  
+}
+
+a.footer__links__color {
+    color: white;
+    margin-left: 1rem;
+}
+
+.label__register{
+    font-size: xx-small;
+    font-weight: bold;
+
+    &__input{
+        font-size: small;
+    }
+
+}
+.label__register__input{
+   
+     @include media-breakpoint-down(md) {    width: 8rem; }
+     @include media-breakpoint-down(lg) {    width: 10rem; }
+     @include media-breakpoint-down(xl) {    width: 13rem; }
+
+}
+.form_contact_content{
+font-size:0.9rem;
+
+}
+.btn-register{
+    
+    @include media-breakpoint-down(xs) { padding:0rem 2rem }
+   
+}
+
+.footer_form {
+  
+    @include media-breakpoint-down(md) {   margin-bottom: 3rem; }
+    @include media-breakpoint-down(lg) {   margin-bottom: 3rem; }
+    @include media-breakpoint-down(xl) {    margin-bottom: 3rem; }
+    margin-bottom: 5rem;
+}

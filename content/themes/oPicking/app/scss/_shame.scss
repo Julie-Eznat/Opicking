@@ -1,0 +1,38 @@
+.no-padding  {
+    padding-right:0;
+    padding-left:0;
+}
+
+
+.main__background {
+    background-color: aquamarine;
+    height: 30rem;
+  
+}
+
+
+.navbar-brand {
+        font-size: 3rem;
+}
+
+
+.apropos {
+    padding-top:15rem;
+    padding-bottom:15rem;
+
+    &__container {
+        width: 80%
+    }
+}
+
+.faq {
+    padding-top:15rem;
+    padding-bottom:15rem;
+
+    &__container {
+        width: 80%
+    }
+}
+
+
+

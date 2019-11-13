@@ -1,0 +1,96 @@
+
+.main__link {
+    min-height: 10rem;
+    background-color: aliceblue;
+    padding: 0.5rem;
+}
+
+
+.main__title{
+margin-bottom: 4rem;
+font-weight:bold;
+color:#343A40;
+}
+.main_article{
+    padding-top:12rem;
+    padding-bottom:5rem;
+}
+.main__icone {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.comment_author {
+    font-weight: bolder;
+    font-size: 0.7rem;
+    margin-top:1rem;
+   
+}
+
+.comment_content {
+    font-size: 0.6rem;
+}
+
+
+.comment_date {
+    font-style: italic;
+    margin-bottom: 0.4rem;
+    border-bottom:1px solid rgba(179, 173, 173, 0.739);
+    font-size: 0.5rem;
+    padding-top:1rem;
+}
+
+.comment_new {
+
+    margin-top: 3rem;
+
+}
+
+.comment_post{
+
+    margin-top:2rem;
+}
+
+.tag{
+    display: flex;
+}
+
+
+.no_embed_description {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: cadetblue;
+    padding-bottom: 1rem;
+}
+
+
+.link_no_embed {
+
+     color:black;
+
+}
+.main__description{
+
+padding-top: 1.5rem;
+font-size: 0.9rem;
+line-height: 25px;
+padding-bottom: 1rem;
+}
+
+.embed-responsive {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    overflow: hidden;
+    min-height: 20rem;
+}
+
+.no-embed-responsive {
+   
+    overflow: hidden;
+    height: 20rem;
+}
+.profil_container{
+    font-size: 0.7rem;
+}

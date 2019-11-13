@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>oPicking</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Object Fit polyfill -->
+  <script src="https://unpkg.com/object-fit-images/dist/ofi.min.js"></script>
+  <!-- Jarallax -->
+  <script src="https://unpkg.com/jarallax@1.10/dist/jarallax.min.js"></script>
+  <!-- Include it if you want to use Video parallax -->
+  <script src="https://unpkg.com/jarallax@1.10/dist/jarallax-video.min.js"></script>
+  <!-- Include it if you want to parallax any element -->
+  <script src="https://unpkg.com/jarallax@1.10/dist/jarallax-element.min.js"></script>
+
+
+</head>
+<body class="home">
+
+  <!--Layout header-->
+<header class="header" >
+  <div class="header__container container-fluid"> 
+    <div class="header__container__row  row ">
+      <div class="header__container__row__col     header__navbar col no-padding">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div class="container-fluid d-flex flex-row justify-content-between">
+        
+          
+              <div class="m-r-auto">
+                <a class="navbar-brand " href="#"> 
+                  <i class="fa fa-bug" aria-hidden="true"></i>
+                  OPicking</a>
+              </div>
+        
+              <div class="">
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                  </button>
+        
+                <div class="collapse navbar-collapse" id="navbarsExample07">
+                  <ul class="navbar-nav mr-auto">
+         
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Catégories</a>
+                      <div class="dropdown-menu" aria-labelledby="dropdown07">
+                        <a class="dropdown-item" href="#">Flore</a>
+                        <a class="dropdown-item" href="#">Faune</a>
+                        <a class="dropdown-item" href="#">Habitat</a>
+                      </div>
+                    </li>
+                  </ul>
+                  <form class="form-inline my-2 my-md-0">
+                    <input class="form-control" type="text" placeholder="Search" aria-label="Search" size="40">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button"><i class="fa fa-search fa-fw"></i></button>
+                      </span>
+                  </form>
+                </div>
+              </div>
+           
+             <div class="m-l-auto">
+                <a href=""><i class="fa fa-user" aria-hidden="true" id="login"></i></a>
+                <a href=""><i class="fa fa-sign-in" aria-hidden="true" id="logout"></i></a>
+              </div>
+
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="page-404">
+  <h1 class="page-404__title">OOPS Mauvaise Récolte</h1>
+
+  <img class="page-404__img" src="images/404.jpg" alt="">
+</div>
+<!-- <?php
+http_response_code( 404 ); -->
+
+<!-- ?> -->
+  <footer>
+      <div class="row">
+          <div class="col">
+            <ul class=" text-center">  
+              <a href="Mentions-Legales">Mentions Legales</a>
+            </ul>
+          </div>  
+          <div class="col">
+            <ul class=" text-center">  
+              <a href="https://www.twitter.com/"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+              <a href="https://www.twitter.com/"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+              <a href="https://github.com/"><i class="fa fa-github" aria-hidden="true"></i></a>
+            </ul>
+          </div>
+          <div class="col ">
+            <ul class="text-center">  
+              <a href="">FAQ </a> 
+              <a href="">A propos </a>  
+          </ul>
+        </div>
+      </div>
+  </footer>
+   <script src="js/app.js"></script>
+</body>
+</html>

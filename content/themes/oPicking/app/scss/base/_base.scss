@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comfortaa', cursive;
+}
+
+
+.titrejaune{    
+    font-family: 'Oleo Script', cursive;
+    color:#6BA03C;
+    font-size:2rem;
+    text-shadow: 3px 3px 7px #000000;
+}
+
+a{
+    color: #6BA03C;
+}
+
+input:invalid {
+    border: 2px solid red;
+}
+  
+input:valid {
+    border: 1px solid black;
+}    

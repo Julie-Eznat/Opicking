@@ -1,0 +1,32 @@
+@mixin page-with-sidebar() {
+    display: grid;
+    grid: {
+        template: {
+            areas:
+                "header header"
+                "sidebar main"
+                "footer footer";
+            columns: calc(100% * 1 / 3 - #{$gutter} / 2) calc(100% * 2 / 3 - #{$gutter} / 2);
+            rows: auto;
+        }
+        column: {
+            gap: $gutter;
+        }
+    }
+
+    .main {
+        margin-right: $gutter * 2;
+
+        @include media-breakpoint-up('xl') {
+            margin-right: $gutter-layout;
+        }
+    }
+
+    .sidebar {
+        margin-left: $gutter * 2;
+
+        @include media-breakpoint-up('xl') {
+            margin-left: $gutter-layout;
+        }
+    }
+}

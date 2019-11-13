@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>oPicking</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Object Fit polyfill -->
+  <script src="https://unpkg.com/object-fit-images/dist/ofi.min.js"></script>
+  <!-- Jarallax -->
+  <script src="https://unpkg.com/jarallax@1.10/dist/jarallax.min.js"></script>
+  <!-- Include it if you want to use Video parallax -->
+  <script src="https://unpkg.com/jarallax@1.10/dist/jarallax-video.min.js"></script>
+  <!-- Include it if you want to parallax any element -->
+  <script src="https://unpkg.com/jarallax@1.10/dist/jarallax-element.min.js"></script>
+
+
+</head>
+<body class="home">
+
+  <!--Layout header-->
+  <header class="header" >
+    <div class="header__container container-fluid"> 
+      <div class="header__container__row  row ">
+        <div class="header__container__row__col     header__navbar col no-padding">
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid d-flex flex-row justify-content-between">
+                <div class="m-r-auto">
+
+                    <a class="navbar-brand " href="index.php"> 
+                      <img src="../assets/images/opicking.png" alt="" class="header__logo">
+                      <span class= "logo_name" > oPicking</span></a>
+                    </div>
+            
+        
+                    <div class="">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+            
+                        <div class="collapse navbar-collapse" id="navbarsExample07">
+                        <ul class="navbar-nav mr-auto">
+               
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Catégories</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdown07">
+                              <a class="dropdown-item" href="#">Flore</a>
+                              <a class="dropdown-item" href="#">Faune</a>
+                              <a class="dropdown-item" href="#">Habitat</a>
+                            </div>
+                          </li> 
+                        </ul>
+                        <form class="form-inline my-2 my-md-0" type="GET" id="searchform" action="">
+                            <input class="form-control" type="text" placeholder="Search" aria-label="Search" name="search" id="search">
+                            <span class="input-group-btn">
+                              <button class="btn btn-default" id="search_user"><i  class="fa fa-search" aria-hidden="true"></i></button>
+                              </span>
+                          </form>
+                        </div>
+                      </div>
+           
+             <div class="m-l-auto">
+                <a href=""><i class="fa fa-user" aria-hidden="true" id="login"></i></a>
+                <a href=""><i class="fa fa-sign-in" aria-hidden="true" id="logout"></i></a>
+                <!--Affichage de l'élément de deconnexion-->
+                <!-- <a href=""><i class="fa fa-sign-out" aria-hidden="true" id="logout"></i></a> -->
+             </div>
+
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+<!--MODALE D'AFFINAGE RECHERCHE-->
+<div id="search_options">
+    <div class="container">
+      <div class="row">
+          <div class="col-12 col-md-2">
+           Affiner la recherche
+          </div>
+          <div class="col-12 col-md-10">
+            <input type="checkbox" name="search_tag_checkbox">Tags <input type="checkbox" name="search_video_checkbox">Video 
+            <div class="form-group">
+              <label for="sel1">Filtrer par</label>
+              <select class="form-control" id="form_addpost_category">
+                  <option>Par date</option>
+                  <option>Par popularité</option>
+              </select>
+              <input type="checkbox" name="search_orderup_checkbox">Ordre croissant <input type="checkbox" name="search_orderdown_checkbox">Ordre décroissant
+          </div>
+            
+          </div> 
+      </div>
+    </div>
+</div>
+
+<!--MODALE DE CONNEXION-->
+<div id="form_login">
+  <form class="container" action="" method='post'>
+    <div class="row">
+        <div class="col-12 col-md-3">
+          <label class='my-username' >Connection</label><br> 
+          <input type='text' name='username' class='text' value=''>
+        </div>
+        <div class="col-12 col-md-3">
+          <label class='my-password' >Mot de passe</label><br>
+          <input type='password' name='password' class='text' value=''>
+        </div>
+        <div class="col-12 col-md-3">
+          <input class='myremember' name='rememberme' type='checkbox' value='forever'> Se souvenir de moi
+        </div>
+        <div class="col-12 col-md-3">
+          <input type='hidden' id='login' name='login' value='login'>
+          <button type='submit' id='submitbtn' name='submit'>Se connecter</button>
+      </div> 
+    </div>
+  </form>
+</div>
+
+<!--MODALE DE DECONNEXION-->
+<div id="form_logout">
+    <form class="container" action="" method="post">
+      <div class="row">
+          <div class="col-12 col-md-4">
+            Voulez-vous vraiment vous déconnecter ?
+          </div>
+          <div class="col-12 col-md-4">
+            <input type='hidden' id='login' name='logout' value='logout'>
+            <button type='submit' id='submit_logout' name='submit_logout'>OUI</button>
+            <!-- <button id='submit_escape' name='submit_escape'>NON</button> -->
+          </div> 
+      </div>
+  </form>
+</div>
+
+</header>
+
+<!-- components: card -->
+<main class="main main_article" style="padding-top:15rem; padding-bottom:5rem;">
+    <div class="container">
+      <div class="row justify-content-between">
+        <div class="col-12 col-md-6 col-lg-8">
+            
+          
+                <h3 class="main__title" style="font-weight:bold; color:#343A40;">Soigneur de Terre</h3>
+                <div class="wrap_single embed-responsive-item ">
+                  <div class="main__link main__link embed-responsive  " style=""><iframe title="Soigneurs de terres, le choix de l'agro-écologie" width="500" height="281" src="https://www.youtube.com/embed/-51aZMXomMA?feature=oembed" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>          </div>
+                  <div class="tag_container mt-3 col-12 col-md-4 col-lg-2">
+                              </div>
+                </div> 
+                <div class="main__description" style="padding-top:1rem;">Documentaire france 2, qui donne l'avis du couple Bouguignons sut l'aberration du mode agricole de nos jours .</div>
+        
+        
+                      <div class="main__icone">
+                        
+            <div class="form_post_notation d-flex">
+            <div class="post_notation_like ">
+            <form action="" method="post">
+             <input type="hidden" name="useful" id="useful" value="2">
+              <button type="submit" style="border:none; background:none;">
+              <img src="http://opicking.me/content/themes/oPicking/public/images/kiwi.png" title="Article utile" alt="Article utile" style="width:30px;"></button>
+           
+         
+           
+               <span class="badge badge-light">0 </span>
+            </form>
+             </div>
+            
+            <div class="post_notation_dislike ml-6">
+            <form action="" method="post">
+             <input type="hidden" name="no-useful" id="no-useful" value="1">
+              <button type="submit" style="border:none; background:none;">
+              <img src="http://opicking.me/content/themes/oPicking/public/images/tomate.png" title="Pas Utile" alt="Article pas utile" style="width:30px;"></button>
+             
+             
+            
+           <span class="badge badge-light">0 </span>
+            </form>
+          </div>
+             
+        </div> 
+      </div> 
+    </div>
+    <div class="profil_container mt-3 col-12 col-md-5 col-lg-4 col-xl-3" style="font-size:0.7rem;">
+        <div style="border: 1px #bbb solid; padding:1rem;">
+        <img src="http://1.gravatar.com/avatar/4f9db64fdb19d602da6aba4cf1c1ce4b?s=96&amp;d=monsterid&amp;r=g" alt="" style="padding:0.5rem;">
+          <h5 style=" padding:0.5rem; text-decoration:underline;"> Jaraf</h5>
+          <p style="padding:0.5rem;"> Nombre de partages : 5</p>
+          <div style="border: 1px #bbb solid; padding:0.5rem; width:100%">admin du site</div>
+          <div class="row">
+            <a href="profil.html" class="mt-3" style="float:left;">
+              <button class=" btn btn-dark btn-sm " style="margin-left:1rem;">Voir le profil</button>
+            </a> 
+            
+          </div>
+        </div>
+      </div>
+      <div class="comment_post col-12 col-md-7 col-lg-6">
+          <h6 class="comment_author">Julie</h6> <div class="comment_content">J'ai adoré cette vidéo!</div><div class="comment_date text-right">10/08/2019</div>
+      <div class="form_post_notation d-flex">
+      <div class="post_notation_like ">
+      <form action="" method="post">
+       <input type="hidden" name="useful36" id="useful" value="2">
+       
+       <button type="submit" style="border:none; background:none;">
+       <img src="http://opicking.me/content/themes/oPicking/public/images/poire.png" title="Article utile" alt="Article utile" style="width:20px;"></button>
+  
+         <span class="badge badge-light">0 </span>
+      </form>
+       </div>
+  
+      <div class="post_notation_dislike ml-6">
+      <form action="" method="post">
+       <input type="hidden" name="no-useful36" id="no-useful" value="1">
+       <button type="submit" style="border:none; background:none;">
+       <img src="http://opicking.me/content/themes/oPicking/public/images/cerise.png" title="Pas Utile" alt="Article pas utile" style="width:20px;"></button>
+      
+        <span class="badge badge-light">0 </span>
+        </form>
+          </div>
+          </div>      
+        </div>
+        <div class="comment_new col-12 md-8 ">
+            <div id="respond" class="comment-respond">
+              <small><a rel="nofollow" id="cancel-comment-reply-link" href="" style="display:none;">Cancel reply</a></small>			
+                <form action="" method="post" id="commentform" class="comment-form">
+                    <p class="comment-form-comment"><label for="comment" class="row ml-0" style="font-size:0.9rem">Comment</label> <textarea id="comment" name="comment" cols="30" rows="3" maxlength="65525" required="required"></textarea></p><p class="form-submit"><input name="submit" type="submit" id="submit" class="submit btn btn-dark btn-sm " value="Post Comment"> <input type="hidden" name="comment_post_ID" value="180" id="comment_post_ID">
+                      <input type="hidden" name="comment_parent" id="comment_parent" value="0">
+                    </p>
+                  </form>
+          </div><!-- #respond -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+<!-- layout: footer -->
+<footer class="footer ">
+
+    <div class="container-fluid">
+
+        <!-- <div class="container-fluid text-center   "> -->
+          <div class="row footer__links ">
+              <div class="col-12 col-md-4  text-center pb-3">
+                
+                  <a href="mentions-legales.html" class="footer__links__color">Mentions Legales</a>
+         
+              </div>  
+              <div class="col-12 col-md-4  text-center pb-3">
+             
+                  <a href="" class="footer__links__color"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                  <a href="" class="footer__links__color"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                  <a href="" class="footer__links__color"><i class="fa fa-github" aria-hidden="true"></i></a>
+               
+              </div>
+              <div class="col-12 col-md-4  text-center">
+                
+                  <a href="FAQ.html" class="footer__links__color">FAQ </a> 
+                  <a href="a-propos.html" class="footer__links__color">A Propos </a>  
+            
+            </div>
+          </div>
+        </div>
+      </footer>
+      
+      
+         <script src="js/app.js"></script>
+      </body>
+      </html>
+

@@ -1,0 +1,52 @@
+.jarallax {
+    position: relative;
+    z-index: -20;
+    
+
+}
+.jarallax > .jarallax-img {
+    position: absolute;
+    object-fit: cover;
+    font-family: 'object-fit: cover;';
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 40vh;
+
+}
+
+.jarallax-img{
+    opacity: 0.5;
+    filter: alpha(opacity=30);
+}
+.jarallax-img:hover {
+    opacity: 1.0;
+    filter: alpha(opacity=100);
+}
+
+.blue-dark
+{
+    background-color: $blue-dark;
+}
+
+.jara1{
+    height: 30rem;
+    @include media-breakpoint-down(sm) { height: 28rem; }
+    @include media-breakpoint-down(xs) { height: 30rem; }
+}
+.jara2{
+    display:none;
+    height:20rem;
+    
+}
+.jara3{
+    height: 25rem;
+} 
+
+.cloud_tag {
+    padding-top: 4rem;
+    width: 70vw;
+    margin: auto;
+    max-block-size: 70%;
+    margin-bottom: 4rem;
+}

@@ -1,0 +1,80 @@
+.header {
+    
+    background-position: center center;
+    background-size: cover;
+    
+    z-index: 10;
+    
+    position:fixed;
+    width:100vw;
+
+    &__logo {
+
+        // @include media-breakpoint-down(xs) { 
+        //     max-width: 115px;
+        //     max-height: 115px; } 
+        @include media-breakpoint-down(sm) { 
+        max-width: 100px;
+        max-height: 85px;
+    }
+      
+        max-width: 115px;
+        max-height: 125px;
+
+}
+}
+
+.navbar {
+    
+    margin: auto;
+   
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.8);
+   
+}
+.nav-link {
+    font-size: 2rem;
+}
+.fa{
+    font-size: 2.8rem;
+}
+#form_login, #form_logout, #search_options{
+    background-color:#F2FDE8;
+    color:black;
+    font-weight:bolder;
+    font-size:0.9rem;
+    padding:0.5rem;
+    display:none;
+    padding:0.8rem;
+}
+
+
+#form_login label, #form_login label{
+    margin:0px;
+    text-align:center;
+}
+
+
+
+
+#login_user, #logout_user, #search_user{
+    font-size :2rem;
+    color:White;
+    background:none; 
+    border:none;
+}
+
+
+#login_user :visited{
+
+    border:none;
+}
+
+.logo_name{
+    display: none; 
+ 
+    @include media-breakpoint-up(xl) { 
+        font-size: 2rem  }
+     
+} 
+
